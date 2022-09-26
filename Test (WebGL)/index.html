@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <canvas id = "mycanvas_text" width = "600" height = "200" ></canvas>
+    <canvas id = "mycanvas_rec" width = "500" height = "500" ></canvas>
+
+    <script>
+      var canvas_text = document.getElementById('mycanvas_text');
+      var context = canvas_text.getContext('2d');
+
+      context.font = '20pt Callbri';
+      context.fillStyle = 'blue';
+      context.fillText('Test WebGL', 70, 70);
+
+      var canvas_rec = document.getElementById('mycanvas_rec');
+      var gl = canvas_rec.getContext('experimental-webgl');
+
+      gl.clearColor(0.8, 0.9, 0.9, 1);
+      gl.clear(gl.COLOR_BUFFER_BIT);
+
+    </script>
+  </body>
+</html>
